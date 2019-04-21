@@ -75,7 +75,7 @@ class Recipe(models.Model):
         (3, _('world class')), (None, _('unknown'))
     )
     difficulty = models.PositiveSmallIntegerField(
-        _('Difficulty'), null=True, blank=True,
+        _('Difficulty'), null=True, blank=True, default=0,
         choices=DIFFICULTY_CHOICES)
     serves = models.PositiveSmallIntegerField(
         _('serves how many people'), blank=True, null=True)
