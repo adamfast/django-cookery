@@ -63,6 +63,11 @@ class Recipe(models.Model):
     outdoor_cooking_friendly = models.BooleanField(
         _('Whether the meal is suitable for outdoor cooking'),
         default=False)
+    slow_cooker_friendly = models.BooleanField(
+        _('Whether the meal is suitable for a slow cooker'),
+        default=False)
+    liked = models.BooleanField(
+        _('Whether the recipe was liked'), default=True)
     tags = models.ManyToManyField(
         'RecipeTag', help_text=_('Tags'), blank=True)
     ingredients = models.ManyToManyField(
