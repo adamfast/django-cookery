@@ -79,6 +79,7 @@ class Recipe(models.Model):
         choices=DIFFICULTY_CHOICES)
     serves = models.PositiveSmallIntegerField(
         _('serves how many people'), blank=True, null=True)
+    typical_meal = models.ForeignKey('MealTime', null=True, blank=True)
     # TODO add timestamp/last modified by
 
     class Meta:
