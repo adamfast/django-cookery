@@ -50,6 +50,7 @@ class Recipe(models.Model):
     name = models.CharField(_('Name'), max_length=100, unique=True)
     author = models.CharField(
         _('Author'), max_length=100, blank=True, null=True)
+    url = models.URLField(null=False, blank=True, default='')
     preparation_time = models.TimeField(
         _('Time required in active preparation'), blank=True,
         null=True)
