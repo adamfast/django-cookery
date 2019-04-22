@@ -131,3 +131,6 @@ class Meal(models.Model):
         else:
             return '%s: meals %s' % (
                 self.name)
+
+    class Meta:
+        ordering = ('-date', 'meal')
